@@ -1,0 +1,98 @@
+#hero {
+  width: 100%;
+  height: 100vh; /* Viewport height */
+  overflow: hidden;
+  background-image: url("../assets/bg6.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  animation: change 20s infinite ease-in-out;
+}
+
+.content {
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: 15px;
+  position: relative;
+  animation: glowing 10s infinite;
+}
+
+.content button{
+  width: fit-content  ;
+  background-color: #4e9cff;
+  color: #121212;
+  border: none;
+  margin: 1.5%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.content button:hover{
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+.content h1 span {
+  color: #fff;
+}
+
+.content .quote {
+  color: #fff;
+  font-size: 20px;
+  margin: 40px 0; /* Added margin for spacing */
+  font-style: italic; /* Make the quote italic */
+ background-color: rgba(0, 0, 0, 0.258);
+}
+
+#gif{
+  width: 10%;
+  height: 50%;
+}
+
+@keyframes change {
+  0% {
+    background-image: url("../assets/bg3.png");
+  }
+  20% {
+    background-image: url("../assets/bg7.jpg");
+  }
+  40% {
+    background-image: url("../assets/bg5.jpg");
+  }
+  60% {
+    background-image: url("../assets/i3.png");
+  }
+  80% {
+    background-image: url("../assets/bg6.jpg");
+  }
+  100% {
+    background-image: url("../assets/bg6.avif");
+  }
+}
+
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 7px #007bff, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+  }
+  50% {
+    text-shadow: 0 0 12px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+  100% {
+    text-shadow: 0 0 7px #007bff, 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+  }
+}
+

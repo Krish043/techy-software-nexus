@@ -1,0 +1,96 @@
+#services {
+  color: #e0e0e0;
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url('../assets/d4.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #007bff;
+  transition: width 0.4s ease; 
+  -webkit-transition: width 0.4s ease; 
+}
+
+h2:hover::after {
+  width: 100%; 
+  left: 0;
+  background: #007bff;
+  box-shadow: 0px 0px 10px #007bff;
+}
+
+h2:hover {
+  cursor: default;
+  text-shadow: 0px 0px 10px #007bff;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-item {
+  position: relative;
+  width: 400px; 
+  height: 550px; 
+  perspective: 1000px;
+}
+
+
+.service-item .service-item-front,
+.service-item .service-item-back {
+    background-color: #000000c4;
+    padding: 5%;
+    height: 470px;
+    position: absolute;
+    border: 1px solid wheat;
+    backface-visibility: hidden;
+    transition: transform 0.5s; /* Add flip transition effect */
+}
+
+.service-item .service-item-front {
+  transform: rotateY(0deg);
+}
+
+.service-item .service-item-back {
+  transform: rotateY(180deg);
+}
+
+.service-item:hover .service-item-front {
+  box-shadow: 0px 0px 15px white;
+  transform: rotateY(-180deg);
+}
+
+.service-item:hover .service-item-back {
+  box-shadow: 0px 0px 15px white;
+  transform: rotateY(0deg);
+}
+
+.service-item img {
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-item h3,
+.service-item p {
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+}

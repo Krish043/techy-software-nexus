@@ -1,0 +1,151 @@
+
+  .regContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 65vh;
+    /* background-color: #2b2b2be4; */
+    background-image: url("../assets/crd4.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fd 1s ease-in;
+    color: #e0e0e0;
+}
+
+.regContainer:hover {
+    box-shadow: 0px 0px 20px #fff;
+}
+
+@keyframes fd {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.lr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.lft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    width: 50%;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.lft > img {
+    width: 100%;
+}
+
+.regContainer h2 {
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.regContainer > :hover {
+    cursor: default;
+    text-shadow: 0px 0px 10px #61dafb;
+}
+
+.regContainer form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: flex-start;
+}
+
+.regContainer label {
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.regContainer input {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+input:hover {
+    box-shadow: 0px 0px 10px #61dafb;
+}
+
+.regContainer .error-message {
+    margin-top: 5px;
+    color: #ff6b6b;
+}
+
+.regContainer button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.regContainer button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 0px 10px #007bff;
+}
+
+.regContainer p {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.regContainer a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.regContainer a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    color: #e0e0e0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ff6b6b;
+}
+

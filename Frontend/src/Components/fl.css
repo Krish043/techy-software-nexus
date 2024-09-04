@@ -1,0 +1,160 @@
+ /* #feedback-container {
+    text-align: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    width: 90vw;
+    height: 90vh;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2{
+    
+    color: #61dafb;
+  }
+  .feedback-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+ 
+  .feedback-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feedback-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  .feedback-card p {
+    margin: 5px 0;
+    color: #e0e0e0;
+  }
+  
+  .feedback-card .name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-card .stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-card .stars img {
+    width: 20px;
+    margin: 0 2px;
+  }
+  
+  .feedback-card .feedback-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+    */
+    
+    #feedback-container {
+      text-align: center;
+      color: #e0e0e0;
+      padding: 20px;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url('../assets/d8.webp');
+      background-position: center 35%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    h2 {
+      color: #61dafb;
+    }
+    
+    .feedback-cards-container {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      align-items: center;
+      justify-content: flex-start; 
+      overflow-x: auto;
+      width: 90vw;
+      height: 400px;
+      scrollbar-width: none;
+      margin: 5%;
+      padding: 1% 3%;
+      gap: 20px;
+      margin-top: 20px;
+      perspective: 1000px; /* Add perspective to give 3D effect */
+    }
+    
+    .feedback-card {
+      background-color: #00000088;
+      border-radius: 10px;
+      box-shadow: 0 0 70px rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      height: 350px;
+      /* width: 350px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      transform: rotateX(75deg); /* Initially flat on the floor */
+      transform-origin: bottom center; /* The origin of transformation */
+    }
+    
+    .feedback-card:hover {
+      z-index: 1000;
+      background-image: url("../assets/crd2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: 0.2s ease-in;
+      transform: rotateX(0); /* Rotate to be vertical on hover */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+    
+    .feedback-card p {
+      margin: 5px 0;
+      color: #e0e0e0;
+    }
+    
+    .feedback-card .name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .feedback-card .stars {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .feedback-card .stars img {
+      width: 20px;
+      margin: 0 2px;
+    }
+    
+    .feedback-card .feedback-text {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    

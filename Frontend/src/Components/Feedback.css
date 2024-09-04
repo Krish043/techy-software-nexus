@@ -1,0 +1,603 @@
+/* #fb{
+  background-image: url('../assets/bg6.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#feedback {
+  background-color: rgba(0, 0, 0, 0.829);
+  width: 65%;
+  height: 85%;
+  border: 1px solid white;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin: 35px;
+  position: relative; 
+  transition: box-shadow 0.3s; 
+}
+
+#feedback:hover {
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.6); 
+}
+
+#feedback::before {
+  content: ''; 
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1; 
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); 
+  transition: box-shadow 0.4s ease-out; 
+}
+
+#feedback:hover::before {
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.6); 
+}
+.fc{
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+
+.form-control, 
+textarea {
+  max-width: 400px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  background-color: #0056b3;
+  margin-top: 15px;
+  height: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  margin-top: 7px;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.lft, .ryt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  margin: 15px 0;
+  color: #aaa;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.list-item .contact-text {
+  margin-left: 10px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 10px 3px;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a{
+  color: #000;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+  width: 80%;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 850px) {
+  #feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lft, .ryt {
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .ryt {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  } 
+}
+
+@media screen and (max-width: 410px) {
+  button[type="submit"] {
+    width: 100%;
+  }
+} */
+
+
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#fb {
+  background-image: url('../assets/bg6.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#feedback {
+  background-color: rgba(0, 0, 0, 0.829);
+  width: 65%;
+  height: 85%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 35px;
+  position: relative; /* Ensure position relative for absolute positioning of pseudo-element */
+  transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+}
+
+#feedback:hover {
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.6); /* Initial glow effect */
+}
+
+#feedback::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); /* Initial no-glow state */
+  transition: box-shadow 0.4s ease-out; /* Transition for glow animation */
+}
+
+#feedback:hover::before {
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.6); /* Final glowing effect on hover */
+}
+
+.fc {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+.form-control,
+textarea {
+  max-width: 400px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  background-color: #0056b3;
+  margin-top: 15px;
+  height: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+#fd{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure position relative for absolute positioning of pseudo-element */
+  transition: box-shadow 0.3s; /* Smooth transition for box-shadow */
+  background-image: url("../assets/thx.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 1rem;
+}   
+#fd:hover{
+  box-shadow: 0px 0px 10px rebeccapurple;
+}
+.alt-send-button {
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 34px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  margin-top: 7px;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.lft,
+.ryt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  margin: 15px 0;
+  color: #aaa;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.list-item .contact-text {
+  margin-left: 10px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 10px 3px;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+  #feedback {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .lft,
+  .ryt {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .ryt {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+
+  .send-button {
+    height: 45px;
+  }
+
+  .alt-send-button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .social-media-list li {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+  }
+
+  .social-media-list li:after {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
