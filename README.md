@@ -60,11 +60,11 @@ http://localhost:3000
 
 📧 Email: krishgangajaliya1@gmail.com
 
-🔗 LinkedIn: linkedin.com/in/krish-gangajaliya-802b79266
+🔗 LinkedIn: https://www.linkedin.com/in/krish-gangajaliya-802b79266/
 
-🌐 Portfolio: krish-gangajaliya.vercel.app
+🌐 Portfolio: https://krish-gangajaliya.vercel.app/
 
-🐱 GitHub: github.com/Krish043
+🐱 GitHub: https://github.com/krish043/
 
 ⭐ Like this project?
 If this project gave you ideas or helped you in any way, consider dropping a ⭐ and sharing it with your network!
